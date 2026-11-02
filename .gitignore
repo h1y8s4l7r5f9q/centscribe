@@ -1,0 +1,23 @@
+# PHP / Symfony
+backend/vendor/
+backend/.env.local
+backend/var/
+backend/public/bundles/
+
+# Node / Vue
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Docker
+.docker/
+*.sql.gz
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Env secrets (пример коммитим, .env.local — нет)
+.env.local
