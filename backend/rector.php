@@ -13,6 +13,9 @@ return RectorConfig::configure()
     ->withPhpSets(
         php85: true
     )
+    ->withSkip([
+        __DIR__.'/tests/bootstrap.php',
+    ])
     ->withTypeCoverageLevel(0)
     ->withDeadCodeLevel(0)
     ->withCodeQualityLevel(0);
