@@ -20,6 +20,7 @@
         "phpstan/phpstan-doctrine": "^2.1",
         "phpstan/phpstan-symfony": "^2.1",
         "phpunit/phpunit": "^13.4",
+        "rector/rector": "^2.8",
         "symfony/browser-kit": "8.1.*",
         "symfony/css-selector": "8.1.*"
     },
@@ -57,10 +58,14 @@
     "scripts": {
         "cs-check":  "vendor/bin/php-cs-fixer fix --dry-run --diff",
         "phpstan":   "vendor/bin/phpstan analyse --memory-limit=512M",
+        "rector":    "vendor/bin/rector process --dry-run",
+        "audit":     "composer audit",
         "test":      "vendor/bin/phpunit",
         "check": [
             "@cs-check",
             "@phpstan",
+            "@rector",
+            "@audit",
             "@test"
         ],
         "auto-scripts": {
